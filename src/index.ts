@@ -44,15 +44,6 @@ const app = new OpenAPIHono<{ Bindings: Environment }>({
   },
 });
 
-// app.use(
-//   "*",
-//   prettyJSON(),
-//   cache({
-//     cacheName: "rates-api",
-//     cacheControl: "public, max-age=5, must-revalidate",
-//   }),
-// );
-
 app.use(
   "/api/v1/*",
   cors({
